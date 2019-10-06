@@ -1,11 +1,11 @@
 plugins {
-    id "com.github.maiflai.scalatest" version "0.19" // needed to run scala tests
+    id "com.github.maiflai.scalatest" version "0.25" // needed to run scala tests
 }
 description = '<description of your project>'
 group = 'com.barrybecker4'
-version = '1.0-SNAPSHOT'
+version = '1.6-SNAPSHOT'
 
-apply from: 'https://raw.github.com/barrybecker4/bb4-common/master/bb4.gradle'
+apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4.gradle'
 
 project.archivesBaseName = 'bb4-project-template'
 mainClassName = 'com.barrybecker4.newpackage.HelloWorld'
@@ -18,7 +18,7 @@ task runHelloWorld(type: JavaExec, dependsOn: classes) {
 }
 
 dependencies {
-    compile 'com.barrybecker4:bb4-ui:1.5-SNAPSHOT'
+    compile 'com.barrybecker4:bb4-ui:1.6-SNAPSHOT'
 }
 
 jar {
@@ -32,4 +32,4 @@ jar {
 }
 
 // This allows publishing of this project library to Sonatype
-apply from: 'https://raw.github.com/barrybecker4/bb4-common/master/bb4-publish.gradle'
+apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4-publish.gradle'
