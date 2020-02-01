@@ -3,10 +3,10 @@ A trivial bb4 project that can be used as a template when creating new bb4 proje
 
 ## How to use it
 
-1. First create a new bb4-<new project> repository in github with no files in it.
+1. First create a new bb4-\<new project\> repository in github with no files in it.
 1. Then either
    * Create a [bare clone](https://help.github.com/articles/duplicating-a-repository/) and modify it, or
-   * Manually copy the project files from a clone of bb4-project-template into a new clone of the empty bb4-<new project> 
+   * Manually copy the project files from a clone of bb4-project-template into a new clone of the empty bb4-\<new project\> 
  directory on the file system. Do not copy the iml file or the following directories:
      * .* (.git, .gradle, .idea) 
      * build
