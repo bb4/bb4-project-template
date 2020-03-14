@@ -22,10 +22,10 @@ dependencies {
 }
 
 jar {
-    archiveName = "${archivesBaseName}-${version}.jar"
+    archiveName = "${project.archivesBaseName}-${project.version}.jar"
     manifest {
         attributes 'Implementation-Title': '<project code>',
-                'Implementation-Version': version,
+                'Implementation-Version': project.version,
                 'provider': 'gradle',
                 'Main-Class': mainClassName
     }
