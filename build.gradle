@@ -4,12 +4,12 @@ plugins {
 description = '<description of your project>'
 group = 'com.barrybecker4'
 version = '1.6-SNAPSHOT'
+ext {
+    archivesBaseName = 'bb4-project-template'
+    mainClass = 'com.barrybecker4.newpackage.HelloWorld'
+}
 
 apply from: 'https://raw.githubusercontent.com/bb4/bb4-common/master/bb4.gradle'
-
-project.archivesBaseName = 'bb4-project-template'
-mainClassName = 'com.barrybecker4.newpackage.HelloWorld'
-
 
 task runHelloWorld(type: JavaExec, dependsOn: classes) {
     group = 'application'
@@ -19,16 +19,6 @@ task runHelloWorld(type: JavaExec, dependsOn: classes) {
 
 dependencies {
     compile 'com.barrybecker4:bb4-ui:1.6-SNAPSHOT'
-}
-
-jar {
-    archiveName = "${project.archivesBaseName}-${project.version}.jar"
-    manifest {
-        attributes 'Implementation-Title': '<project code>',
-                'Implementation-Version': project.version,
-                'provider': 'gradle',
-                'Main-Class': mainClassName
-    }
 }
 
 // This allows publishing of this project library to Sonatype
