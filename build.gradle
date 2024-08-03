@@ -4,7 +4,7 @@ buildscript {
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
     }
     dependencies {
-        classpath 'com.barrybecker4:bb4-gradle:1.8-SNAPSHOT'
+        classpath 'com.barrybecker4:bb4-gradle:1.9-SNAPSHOT'
     }
 }
 
@@ -24,12 +24,12 @@ apply from: project.buildscript.classLoader.getResource('bb4.gradle').toURI()
 
 task runHelloWorld(type: JavaExec, dependsOn: classes) {
     group = 'application'
-    main = 'com.barrybecker4.newpackage.HelloWorld'
+    mainClass = 'com.barrybecker4.newpackage.HelloWorld'
     classpath = sourceSets.main.runtimeClasspath
 }
 
 dependencies {
-    implementation 'com.barrybecker4:bb4-common:1.8-SNAPSHOT'
+    implementation 'com.barrybecker4:bb4-common:1.9-SNAPSHOT'
 }
 
 // This allows publishing of this project library to Sonatype

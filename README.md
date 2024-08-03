@@ -15,7 +15,8 @@ A trivial bb4 project that can be used as a template when creating new bb4 proje
    
    I prefer the second approach because then it will not have the git history from bb4-project-template.
    
-1. Lastly, open the new project in intellij by opening the build.gradle file. In the import dialog, select the option to use the gradle wrapper instead of specifying the location of gradle. Now you have a working project to start from. Just modify it as needed to create your new bb4 project. Update the gitUrl in the Jenkins file.
+1. Open the new project in Intellij by opening the build.gradle file. In the import dialog, select the option to use the gradle wrapper instead of specifying the location of gradle. Now you have a working project to start from. Just modify it as needed to create your new bb4 project. 
+1. Update the gitUrl in the Jenkins file.
 
      
  
