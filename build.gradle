@@ -1,37 +1,18 @@
-buildscript {
-    repositories {
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/"}
-        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
-    }
-    dependencies {
-        classpath 'com.barrybecker4:bb4-gradle:1.9-SNAPSHOT'
-    }
-}
-
 plugins {
-    id "com.github.maiflai.scalatest" version "0.32" // needed to run scala tests
+    id 'com.barrybecker4.bb4.scala-library' version '2.0-SNAPSHOT'
+    id 'com.barrybecker4.bb4.publish' version '2.0-SNAPSHOT'
+    id 'com.barrybecker4.bb4.application' version '2.0-SNAPSHOT'
 }
 
 description = '<description of your project>'
 group = 'com.barrybecker4'
-version = '1.8-SNAPSHOT'
-ext {
-    archivesBaseName = 'bb4-project-template'
-    mainClass = 'com.barrybecker4.newpackage.HelloWorld'
-}
+version = '2.0-SNAPSHOT'
 
-apply from: project.buildscript.classLoader.getResource('bb4.gradle').toURI()
-
-task runHelloWorld(type: JavaExec, dependsOn: classes) {
-    group = 'application'
-    mainClass = 'com.barrybecker4.newpackage.HelloWorld'
-    classpath = sourceSets.main.runtimeClasspath
+bb4 {
+    archivesBaseName.set('bb4-project-template')
+    mainClass.set('com.barrybecker4.newpackage.HelloWorld')
 }
 
 dependencies {
-    implementation 'com.barrybecker4:bb4-common:1.9-SNAPSHOT'
+    implementation 'com.barrybecker4:bb4-common:2.0-SNAPSHOT'
 }
-
-// This allows publishing of this project library to Sonatype
-apply from: project.buildscript.classLoader.getResource('bb4-publish.gradle').toURI()
-
