@@ -1,12 +1,12 @@
 plugins {
-    id 'com.barrybecker4.bb4.scala-library' version '2.0-SNAPSHOT'
-    id 'com.barrybecker4.bb4.publish' version '2.0-SNAPSHOT'
-    id 'com.barrybecker4.bb4.application' version '2.0-SNAPSHOT'
+    id 'com.barrybecker4.bb4.scala-library' version '2.1-SNAPSHOT'
+    id 'com.barrybecker4.bb4.publish' version '2.1-SNAPSHOT'
+    id 'com.barrybecker4.bb4.application' version '2.1-SNAPSHOT'
 }
 
 description = '<description of your project>'
 group = 'com.barrybecker4'
-version = '2.0-SNAPSHOT'
+version = '2.1-SNAPSHOT'
 
 bb4 {
     archivesBaseName.set('bb4-project-template')
@@ -14,5 +14,5 @@ bb4 {
 }
 
 dependencies {
-    implementation 'com.barrybecker4:bb4-common:2.0-SNAPSHOT'
+    implementation 'com.barrybecker4:bb4-common:2.1-SNAPSHOT'
 }
