@@ -5,6 +5,7 @@ plugins {
     alias(bb4Libs.plugins.scala.library)
     alias(bb4Libs.plugins.publish)
     alias(bb4Libs.plugins.application)
+    alias(bb4Libs.plugins.quality)
 }
 
 description = '<description of your project>'
